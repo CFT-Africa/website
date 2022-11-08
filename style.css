@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  font-family: 'Barlow', sans-serif;
+  font-size: 14px;
+}
+.Menu {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+}
+.Menu .logo {
+  margin-right: auto;
+}
+.Menu a {
+  display: none;
+}
+.Hero {
+  background: 0% 33% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 60px 20px;
+  background-blend-mode: multiply;
+}
+.Hero h1 {
+  margin: 0 0 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.Hero p {
+  margin: 0 0 20px;
+}
+.Hero button {
+  background: #EF8B2C;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px 0px;
+}
+.Section {
+  padding: 40px 20px;
+}
+.Section h2 {
+  color: #A28B2C;
+  margin-bottom: 0;
+}
+.Section h3 {
+  margin: 5px 0;
+}
+.Section p {
+  margin-top: 0;
+}
+@media (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .Menu {
+    padding-right: 60px;
+  }
+  .Menu .logo {
+    height: 60px;
+  }
+  .Menu .icon {
+    display: none;
+  }
+  .Menu a {
+    display: block;
+    margin-left: 60px;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: black;
+  }
+  .Hero {
+    text-align: center;
+    padding: 120px 60px;
+  }
+  .Hero h1 {
+    font-size: 40px;
+  }
+  .Hero p {
+    max-width: 920px;
+    margin: 20px auto 40px;
+  }
+  .Hero button {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+  .Section {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Section > div {
+    width: 30%;
+  }
+}
