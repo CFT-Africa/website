@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: sans-serif;
   margin: 0;
@@ -8,21 +11,43 @@ body {
   display: flex;
   padding: 12px;
   align-items: center;
+  position: fixed;
+  background: white;
+  width: 100%;
 }
 .Menu .logo {
   margin-right: auto;
 }
 .Menu a {
+  display: block;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+}
+.Menu .nav {
   display: none;
+  /* display: flex; */
+  background: white;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  padding: 5px 16px 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.Menu .nav.open {
+  display: flex;
 }
 .Hero {
-  background: 0% 33% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
+  background: 0% 30% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
   color: white;
   padding: 60px 20px;
   background-blend-mode: multiply;
 }
 .Hero h1 {
-  margin: 0 0 10px;
+  margin: 64px 0 10px;
   font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;
   font-size: 32px;
@@ -60,10 +85,16 @@ body {
     padding-right: 60px;
   }
   .Menu .logo {
-    height: 60px;
+    height: 50px;
   }
   .Menu .icon {
     display: none;
+  }
+  .Menu .nav {
+    display: flex;
+    position: unset;
+    justify-content: flex-end;
+    padding: 0;
   }
   .Menu a {
     display: block;
