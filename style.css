@@ -14,11 +14,15 @@ body {
   position: fixed;
   background: white;
   width: 100%;
+  z-index: 2;
 }
 .Menu .logo {
   margin-right: auto;
 }
-.Menu a {
+.Menu .icon {
+  margin-left: auto;
+}
+.Menu .nav a {
   display: block;
   text-decoration: none;
   font-family: 'Barlow Condensed', sans-serif;
@@ -41,7 +45,7 @@ body {
   display: flex;
 }
 .Hero {
-  background: 0% 30% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
+  background: 0% 0% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
   color: white;
   padding: 60px 20px;
   background-blend-mode: multiply;
@@ -55,7 +59,7 @@ body {
 .Hero p {
   margin: 0 0 20px;
 }
-.Hero button {
+/* .Hero button {
   background: #EF8B2C;
   border: none;
   color: white;
@@ -63,25 +67,72 @@ body {
   font-weight: bold;
   font-size: 14px;
   border-radius: 5px 0px;
-}
+} */
 .Section {
-  padding: 40px 20px;
+  padding: 40px 20px 20px;
+}
+.Section .content {
+  margin-bottom: 40px;
+  background-color: white;
+}
+.Section img {
+  margin-bottom: 5px;
 }
 .Section h2 {
   color: #A28B2C;
-  margin-bottom: 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
 }
 .Section h3 {
   margin: 5px 0;
 }
 .Section p {
   margin-top: 0;
+  margin-bottom: 5px;
+}
+.Section a {
+  color: #4F4F4F;
+}
+.Section a::after {
+  content: url('icons/arrow-right-line.svg');
+}
+footer {
+  background-color: #4F4F4F;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer div:first-child {
+  width: 100%;
+  margin-bottom: 10px;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+}
+footer div:last-child {
+  margin-top: 20px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.6;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+footer a:first-child {
+  opacity: 1;
 }
 @media (min-width: 600px) {
   body {
     font-size: 16px;
   }
   .Menu {
+    padding-left: 24px;
     padding-right: 60px;
   }
   .Menu .logo {
@@ -96,7 +147,7 @@ body {
     justify-content: flex-end;
     padding: 0;
   }
-  .Menu a {
+  .Menu .nav a {
     display: block;
     margin-left: 60px;
     text-decoration: none;
@@ -108,6 +159,8 @@ body {
   .Hero {
     text-align: center;
     padding: 120px 60px;
+    background: none;
+    color: black;
   }
   .Hero h1 {
     font-size: 40px;
@@ -116,15 +169,76 @@ body {
     max-width: 920px;
     margin: 20px auto 40px;
   }
-  .Hero button {
+  /* .Hero button {
     font-size: 16px;
     padding: 15px 30px;
-  }
+  } */
   .Section {
-    display: flex;
-    justify-content: space-around;
+    padding: 0;
+    margin-bottom: 120px;
   }
-  .Section > div {
-    width: 30%;
+  .Section h2 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .Section h3 {
+    font-size: 22px;
+  }
+  .Section p {
+    margin: 10px 0;
+  }
+  .Section .service:first-child a {
+    margin-right: 40px;
+    display: inline-block;
+  }
+  .Section .service {
+    display: flex;
+  }
+  .Section .service:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+  .Section .service::before {
+    content: '';
+    width: 50%;
+    background: 0% 0% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg');
+  }
+  .Section .service::after {
+    filter: grayscale(1);
+    content: '';
+    width: 50%;
+    position: absolute;
+    height: 480px;
+    right: 0;
+    background: 0% 0% / contain url('icons/shapes-right.svg');
+  }
+  .Section .service:nth-child(2n)::after {
+    left: 0;
+    background: 100% 0% / contain url('icons/shapes-left.svg');
+  }
+  .Section .content {
+    margin: 80px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    margin-left: -80px;
+  }
+  .Section .service:nth-child(2n) .content {
+    margin-left: 0;
+    margin-right: -80px;
+  }
+  footer {
+    padding: 60px 120px;
+    justify-content: space-between;
+  }
+  footer img {
+    height: 40px;
+  }
+  footer div:nth-child(n) {
+    width: auto;
+  }
+  footer div:last-child {
+    margin-top: 0;
+    margin-right: 120px;
   }
 }
