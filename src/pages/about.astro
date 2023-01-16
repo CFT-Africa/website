@@ -1,0 +1,94 @@
+---
+import Layout from '../layout/Layout.astro'
+import image from '../images/tobias-nii-kwatei-quartey-HZiXKL5uYZI-unsplash.jpg'
+---
+
+<Layout>
+  <main>
+    <img src={image} alt="">
+    <div>
+      <h1><span id="who-we-are"/>Who We Are</h1>
+      <p>We are in the process of making agriculture lucrative for African farmers to ensure global food sustainability and security, poverty reduction, and job opportunities by simply democratizing the marketplace for farmers to have control of their produce from harvest to market.</p>
+      <p>We believe empowering smallholder farmers, who contribute over 70% of the food supply in the continent, will transform Africa to become a prominent breadbasket of the world and end world hunger. And our approach is to provide easy access to the market for farmers by eliminating third-party intermediaries subjecting smallholder farmers to excruciating poverty due to the meagre prices offered for raw agriculture products at the farm gates.</p>
+      <p><b>Vision</b>
+        <br>Feeding nations, transforming lives.</p>
+      <p><b>Mission</b>
+        <br>Our mission is to harness hard-to-find data on farmers to end world hunger, reduce poverty, and create jobs within the agricultural value chain until the last jobless youth is meaningfully engaged.</p>
+      <h2><span id="history"/>History</h2>
+      <p>On November 2017, we embarked on a pilot project dubbed the Africa Industrialization Initiative under the auspices of TAYE Innovation Hub (a company poised to find solutions that create enabling opportunities for the teeming African youth). Young Africans are looking for opportunities like any other youngster in the world. And by 2050, there will be about 2.5 billion people in Africa, and over 60% of the world's young will be Africans. The question looms. Will the African youth bulge become a demographic dividend or peril?</p>
+      <p>So, to harness the demographic dividend of Africa, we realized that the informal sector alone, when structured, could create enormous job opportunities for African youths and equally create the Africa we all want to see. Hence, the Africa Industrialization Initiative.</p>
+      <p>Throughout the initiative, we engaged several players within the informal sector (the majority of whom are farmers) and discovered that smallholder farmers are constantly abused and impoverished by third-party intermediaries, who have formed a syndicate and deprived farmers of direct access to the market. For this reason, smallholder farmers have no choice but to succumb to the dictate of the syndicate traders despite being the largest socio-economic group in Africa.
+        <br>Consortium Farmers Trade Africa (CFT Africa) is an intervention strategy for the callous pricing problem meted out to smallholder farmers. The approach is to democratize the marketplace for African farmers to have control of their produce from harvest to market.</p>
+      <h2><span id="the-way-forward"/>The Way Forward</h2>
+      <p>We believe that technology is the tool that will solve most of Africa's pressing challenges, especially the plight of farmers and the increasing threats to food security. And our goal is to democratize the traditional marketplace in Africa to feed nations and transform lives.</p>
+      <p>In achieving the above, CFT Africa's platform is set up to transition smallholder farmers into the formal economy by structuring their operations throughout the agricultural value chain. We will connect smallholder farmers and direct buyers on the platform, whereas CFT Africa will serve as the trade facilitator.
+        <br>First-party data from farmers, including but not limited to land size (cultivated and uncultivated), soil type, crop type(s), annual yield and productivity, type of fertilizers and pesticides used, livestock numbers, location, market structure, shall be collected and used to power the platform. We will group farmers into commercial or smallholder categories based on the data. Then the smallholder farmers shall be sub-grouped into consortia to enable them to serve clients in Africa and beyond. Also, third-party geo data, including climate (rainfall patterns and water cycles), market prices, etc., shall be collected to complement the original data on farmers and streamline operations.</p>
+      <p>Collecting and analyzing the above data will enable farmers to know the type of crops to plant at a particular season for better profitability and the go-to-market strategy. Customers will also benefit from the continuous supply, quality raw agricultural products, and ability to predict shortage and increase storage, etc.</p>
+      <p>We aspire to continuously innovate by making agriculture lucrative to attract the youth, avert the anathema of unprecedented unemployment bedeviling Africa, and possibly make Africa the world's breadbasket.</p>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    @media (min-width: 600px) {
+      display: flex;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 144px;
+    opacity: 0.2;
+    object-fit: cover;
+    object-position: top;
+    @media (min-width: 600px) {
+      opacity: 1;
+      position: sticky;
+      top: 0;
+      width: 45%;
+      height: 100vh;
+    }
+  }
+  div {
+    padding: 20px;
+    position: relative;
+    top: -40px;
+    @media (min-width: 600px) {
+      margin-top: 77px;
+      padding: 120px 160px 0 80px;
+    }
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+		font-family: 'Barlow Condensed', sans-serif;
+		text-transform: uppercase;
+		font-size: 32px;
+    @media (min-width: 600px) {
+      font-size: 40px;
+    }
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  b {
+    color: #828282;
+  }
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+		text-transform: uppercase;
+    font-size: 18px;
+    @media (min-width: 600px) {
+      font-size: 22px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+  }
+  span {
+    position: relative;
+    top: -80px;
+  }
+</style>

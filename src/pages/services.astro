@@ -1,0 +1,214 @@
+---
+import Layout from '../layout/Layout.astro'
+import image from '../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
+---
+
+<Layout>
+	<main>
+		<img src={image} alt="">
+		<div class="Section">
+			<h1>Services</h1>
+			<div class="service">
+				<div class="content">
+					<img src="icons/order.svg" alt="" class="service">
+					<h2>Complete Farm Order</h2>
+					<p>Source raw agricultural products directly from farmers from over 50 countries in Africa</p>
+					<a href="/services/complete-farm-order">Get started now</a>
+				</div>
+			</div>
+			<div class="service">
+				<div class="content">
+					<img src="icons/go.svg" alt="" class="service">
+					<h2>EasyGo Fulfillment</h2>
+					<p>We make it easy to manage your logistics and deliver raw agricultural products efficiently</p>
+					<a href="">Get started now</a>
+				</div>
+			</div>
+			<div class="service">
+				<div class="content">
+					<img src="icons/engage.svg" alt="" class="service">
+					<h2>Farmer Engagement</h2>
+					<p>Site under construction. Please, contact us for swift response</p>
+					<a href="">Contact</a>
+				</div>
+			</div>
+			<div class="service">
+				<div class="content">
+					<img src="icons/connect.svg" alt="" class="service">
+					<h2>Farmers Link</h2>
+					<p>Site under construction. Please, tell us if you’re a farmer, farm manager or group representative to fill a survey for better engagements and services</p>
+					<a href="">Contact</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style lang="scss">
+	main {
+    @media (min-width: 600px) {
+      display: flex;
+    }
+  }
+  main > img {
+    display: block;
+    width: 100%;
+    height: 144px;
+    opacity: 0.2;
+    object-fit: cover;
+    object-position: top;
+    @media (min-width: 600px) {
+      opacity: 1;
+      position: sticky;
+      top: 0;
+      width: 45%;
+      height: 100vh;
+    }
+  }
+  main > div {
+    padding: 20px;
+    position: relative;
+    top: -40px;
+    @media (min-width: 600px) {
+      margin-top: 77px;
+      padding: 120px 160px 0 80px;
+      flex-grow: 1;
+    }
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+		font-family: 'Barlow Condensed', sans-serif;
+		text-transform: uppercase;
+		font-size: 32px;
+    @media (min-width: 600px) {
+      font-size: 40px;
+    }
+  }
+  label {
+    color: #4F4F4F;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input, textarea {
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+		background: #2E5984;
+		border: none;
+		color: white;
+		padding: 12px 30px;
+		font-weight: bold;
+		font-size: 14px;
+		border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Barlow', sans-serif;
+    @media (min-width: 600px) {
+      font-size: 16px;
+      max-width: 280px;
+    }
+	}
+	.Section {
+		// padding: 40px 20px 20px;
+	}
+	.Section .content {
+		margin-bottom: 40px;
+		background-color: white;
+	}
+	.Section img {
+		margin-bottom: 5px;
+	}
+	.Section h2 {
+		color: #EF8B2C;
+		margin: 0 0 5px;
+		text-transform: uppercase;
+		/* font-family: 'Barlow Condensed', sans-serif; */
+		font-size: 14px;
+	}
+	.Section h3 {
+		margin: 5px 0;
+	}
+	.Section p {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+	.Section a {
+		color: #4F4F4F;
+	}
+	.Section a::after {
+		content: url('icons/arrow-right-line 1.svg');
+	}
+	@media (min-width: 600px) {
+		.Section {
+			// padding: 0;
+			// margin-bottom: 120px;
+		}
+		.Section h2 {
+			font-size: 16px;
+			margin: 10px 0;
+		}
+		.Section h3 {
+			font-size: 22px;
+		}
+		.Section p {
+			margin: 10px 0;
+		}
+		.Section a {
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		.Section .service:first-child a {
+			margin-right: 40px;
+		}
+		.Section .service {
+			display: flex;
+		}
+		/* .Section .service:nth-child(2n) {
+			flex-direction: row-reverse;
+		}
+		.Section .service::before {
+			content: '';
+			width: 50%;
+			background: 0% 10% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg');
+		}
+		.Section .service:nth-child(2)::before {
+			background: 0% 60% / cover url('sarah-elizabeth-wxhj8ZjaMbE-unsplash.jpg');
+		}
+		.Section .service:nth-child(3)::before {
+			background: 0% 0% / cover url('darshan-gavali-OgMkQSFJ23w-unsplash.jpg');
+		}
+		.Section .service:nth-child(4)::before {
+			background: 0% 0% / cover url('tim-mossholder-xDwEa2kaeJA-unsplash.jpg');
+		} */
+		/* .Section .service::after {
+			filter: grayscale(1);
+			content: '';
+			width: 50%;
+			position: absolute;
+			height: 480px;
+			right: 0;
+			background: 0% 0% / contain url('icons/shapes-right.svg');
+		}
+		.Section .service:nth-child(2n)::after {
+			left: 0;
+			background: 100% 0% / contain url('icons/shapes-left.svg');
+		} */
+		/* .Section .content {
+			margin: 80px;
+			padding: 40px;
+			position: relative;
+			z-index: 1;
+			max-width: 560px;
+			margin-left: -80px;
+		} */
+		/* .Section .service:nth-child(2n) .content {
+			margin-left: 0;
+			margin-right: -80px;
+		} */
+	}
+</style>

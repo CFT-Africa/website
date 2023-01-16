@@ -1,0 +1,178 @@
+---
+import Layout from '../layout/Layout.astro'
+import order from '../images/logos/order.svg'
+---
+
+<Layout>
+	<div class="Hero">
+		<h1>Feeding Nations, Transforming Lives</h1>
+		<p>We help farmers create value for their produce, improve livelihoods and increase food security while empowering businesses and other stakeholders with data-driven solutions to source raw agricultural products and create enabling opportunities within the agricultural value chain and plenty</p>
+	</div>
+	<div class="Section">
+		<div class="service">
+			<div class="content">
+				<img src={order} alt="" class="service">
+				<h2>Complete Farm Order</h2>
+				<h3>Direct order of raw agricultural products from farmers</h3>
+				<p>We source directly from farmers and deliver to clients, ensuring continuous supply, quality assurance, and value for money</p>
+				<a href="/services/complete-farm-order">Get started by requesting quotations for your procurement needs</a>
+			</div>
+		</div>
+		<div class="service">
+			<div class="content">
+				<img src="icons/go.svg" alt="" class="service">
+				<h2>EasyGo Fulfillment</h2>
+				<h3>Simplified fulfillment process for raw agricultural products with extensive network within the value chain</h3>
+				<p>We provide innovative end to end supply chain solutions for buyers/clients, with much focus on intra African trade through the AfCFTA Hub, at a click of a button</p>
+				<a href="">Register with us to experience our innovative logistic solutions</a>
+			</div>
+		</div>
+		<div class="service">
+			<div class="content">
+				<img src="icons/engage.svg" alt="" class="service">
+				<h2>Farmer Engagement</h2>
+				<h3>Engage farmers with thorough insights driven by data</h3>
+				<p>We provide hard-to-find data and intelligence on farmers to enable diligent stakeholders to make informed decisions regarding inputs, financial support & inclusion, and plenty</p>
+				<a href="">Start engaging farmers to create enabling opportunities within the agricultural value chain and improve global food security</a>
+			</div>
+		</div>
+		<div class="service">
+			<div class="content">
+				<img src="icons/connect.svg" alt="" class="service">
+				<h2>Farmers Link</h2>
+				<h3>Connecting farmers to curated opportunities at little or no cost</h3>
+				<p>We help farmers access opportunities such as crop insurance, credit facilities from partnered financial institutions, advisory services, etc., which could otherwise be beyond their reach</p>
+				<a href="">Start browsing through opportunities and make use of what best serve your needs</a>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.Hero {
+		background: 0% 0% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
+		color: white;
+		padding: 60px 20px;
+		background-blend-mode: multiply;
+	}
+	.Hero h1 {
+		margin: 64px 0 10px;
+		font-family: 'Barlow Condensed', sans-serif;
+		text-transform: uppercase;
+		font-size: 32px;
+	}
+	.Hero p {
+		margin: 0 0 20px;
+	}
+	.Section {
+		padding: 40px 20px 20px;
+	}
+	.Section .content {
+		margin-bottom: 40px;
+		background-color: white;
+	}
+	.Section img {
+		margin-bottom: 5px;
+	}
+	.Section h2 {
+		color: #A28B2C;
+		margin: 0;
+		text-transform: uppercase;
+		font-family: 'Barlow Condensed', sans-serif;
+		font-size: 14px;
+	}
+	.Section h3 {
+		margin: 5px 0;
+	}
+	.Section p {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+	.Section a {
+		color: #4F4F4F;
+	}
+	.Section a::after {
+		content: url('icons/arrow-right-line.svg');
+	}
+	@media (min-width: 600px) {
+		.Hero {
+			text-align: center;
+			padding: 120px 60px;
+			background: none;
+			color: black;
+		}
+		.Hero h1 {
+			font-size: 40px;
+		}
+		.Hero p {
+			max-width: 920px;
+			margin: 20px auto 40px;
+		}
+		.Section {
+			padding: 0;
+			margin-bottom: 120px;
+		}
+		.Section h2 {
+			font-size: 16px;
+			margin: 10px 0;
+		}
+		.Section h3 {
+			font-size: 22px;
+		}
+		.Section p {
+			margin: 10px 0;
+		}
+		.Section a {
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		.Section .service:first-child a {
+			margin-right: 40px;
+		}
+		.Section .service {
+			display: flex;
+		}
+		.Section .service:nth-child(2n) {
+			flex-direction: row-reverse;
+		}
+		.Section .service::before {
+			content: '';
+			width: 50%;
+			background: 0% 10% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg');
+		}
+		.Section .service:nth-child(2)::before {
+			background: 0% 60% / cover url('sarah-elizabeth-wxhj8ZjaMbE-unsplash.jpg');
+		}
+		.Section .service:nth-child(3)::before {
+			background: 0% 0% / cover url('darshan-gavali-OgMkQSFJ23w-unsplash.jpg');
+		}
+		.Section .service:nth-child(4)::before {
+			background: 0% 0% / cover url('tim-mossholder-xDwEa2kaeJA-unsplash.jpg');
+		}
+		.Section .service::after {
+			filter: grayscale(1);
+			content: '';
+			width: 50%;
+			position: absolute;
+			height: 480px;
+			right: 0;
+			background: 0% 0% / contain url('icons/shapes-right.svg');
+		}
+		.Section .service:nth-child(2n)::after {
+			left: 0;
+			background: 100% 0% / contain url('icons/shapes-left.svg');
+		}
+		.Section .content {
+			margin: 80px;
+			padding: 40px;
+			position: relative;
+			z-index: 1;
+			max-width: 560px;
+			margin-left: -80px;
+		}
+		.Section .service:nth-child(2n) .content {
+			margin-left: 0;
+			margin-right: -80px;
+		}
+	}
+</style>

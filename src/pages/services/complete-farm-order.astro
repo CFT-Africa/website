@@ -1,0 +1,261 @@
+---
+import Layout from '../../layout/Layout.astro'
+import image from '../../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
+import order from '../../images/logos/order.svg'
+---
+
+<Layout>
+	<main>
+		<img src={image} alt="">
+    <form class="Section">
+			<h1>Services</h1>
+      <div class="service">
+				<div class="content">
+					<img src={order} alt="" class="service">
+					<h2>Complete Farm Order</h2>
+					<p>Source raw agricultural products directly from farmers from over 50 countries in Africa</p>
+					<!-- <a href="">Get started now</a> -->
+				</div>
+			</div>
+      <div>
+        <span>
+          <label for="first_name">First Name</label>
+          <input name="first_name" type="text">
+        </span>
+        <span>
+          <label for="last_name">Last Name</label>
+          <input name="last_name" type="text">
+        </span>
+      </div>
+      <label for="email">Email</label>
+      <input name="email" type="text">
+      <label for="company">Company (optional)</label>
+      <input name="company" type="text">
+      <label for="message">Message</label>
+      <textarea name="message" rows="8"></textarea>
+      <button type="submit">Submit</button>
+      <aside>
+        <b>What is Complete Farm Order?</b>
+        <p>
+          “Complete Farm Order” is the melting pot where farmers trade directly with buyers, offering highly competitive price for raw agricultural products, while we serve as the trade facilitator with no charge to farmers, and take care of all the necessary steps to get them delivered.
+          <br>Once you place an order request, CFT Africa will provide quotations, product options and details, logistics updates, and actual delivery. You only need to consider the terms agreed between you and CFT Africa.
+        </p>
+      </aside>
+    </form>
+    <div>
+			<h2>See Also</h2>
+      <div class="Section">			
+        <div class="service">
+          <div class="content">
+            <img src="/icons/go.svg" alt="" class="service">
+            <h2>EasyGo Fulfillment</h2>
+            <p>We make it easy to manage your logistics and deliver raw agricultural products efficiently</p>
+            <a href="">Get started now</a>
+          </div>
+        </div>
+        <div class="service">
+          <div class="content">
+            <img src="/icons/engage.svg" alt="" class="service">
+            <h2>Farmer Engagement</h2>
+            <p>Site under construction. Please, contact us for swift response</p>
+            <a href="">Contact</a>
+          </div>
+        </div>
+        <div class="service">
+          <div class="content">
+            <img src="/icons/connect.svg" alt="" class="service">
+            <h2>Farmers Link</h2>
+            <p>Site under construction. Please, tell us if you’re a farmer, farm manager or group representative to fill a survey for better engagements and services</p>
+            <a href="">Contact</a>
+          </div>
+        </div>
+      </div>
+		</div>
+	</main>
+</Layout>
+
+<style lang="scss">
+  body {
+    background: #EF8B2C;
+  }
+  aside {
+    display: block;
+    margin: 30px 0 20px;
+    p {
+      margin-top: 10px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+	main {
+    // background: #EF8B2C;
+    @media (min-width: 600px) {
+      display: flex;
+      // flex-direction: row-reverse;
+      align-items: start;
+    }
+    > img {
+      display: block;
+      width: 100%;
+      height: 144px;
+      opacity: 0.2;
+      object-fit: cover;
+      object-position: top;
+      @media (min-width: 600px) {
+        display: none;
+      }
+    }
+    margin-bottom: -40px;
+  }
+  main > form {
+    // display: flex;
+    // flex-direction: column;
+    color: white;
+    width: 100%;
+    // height: 144px;
+    // opacity: 0.2;
+    object-fit: cover;
+    object-position: top;
+    @media (min-width: 600px) {
+      // opacity: 1;
+      // position: sticky;
+      // top: 0;
+      // height: 100vh;
+    }
+    padding: 20px;
+    position: relative;
+    top: -40px;
+    .content {
+      margin-bottom: 20px !important;
+    }
+    @media (min-width: 600px) {
+      margin-top: 77px;
+      padding: 120px 160px 0 160px;
+      flex-shrink: 0;
+      width: 65%;
+      div:not(:first-child) {
+        display: flex;
+        span {
+          width: 50%;
+        }
+        :first-child {
+          margin-right: 15px;
+        }
+      }
+    }
+    h2 {
+      color: white !important;
+    }
+    img {
+      filter: brightness(100);
+    }
+  }
+  main > div {
+    background: white;
+    padding: 20px;
+    position: relative;
+    top: -40px;
+    @media (min-width: 600px) {
+      margin-top: 77px;
+      padding: 120px 160px 40px 80px;
+      flex-grow: 1;
+    }
+    h2 {
+      color: #4F4F4F;
+    }
+  }
+  h1, h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+		font-family: 'Barlow Condensed', sans-serif;
+		text-transform: uppercase;
+		font-size: 32px;
+    @media (min-width: 600px) {
+      font-size: 40px;
+    }
+  }
+  label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input, textarea {
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+		background: #B63E06;
+		border: none;
+		color: white;
+		padding: 12px 30px;
+		font-weight: bold;
+		font-size: 14px;
+		border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Barlow', sans-serif;
+    cursor: pointer;
+    @media (min-width: 600px) {
+      font-size: 16px;
+      max-width: 320px;
+    }
+	}
+	.Section {
+		// padding: 40px 20px 20px;
+	}
+	.Section .content {
+		margin-bottom: 40px;
+		// background-color: white;
+	}
+	.Section img {
+		margin-bottom: 5px;
+	}
+	.Section h2 {
+		color: #EF8B2C;
+		margin: 0 0 5px;
+		text-transform: uppercase;
+		/* font-family: 'Barlow Condensed', sans-serif; */
+		font-size: 14px;
+	}
+	.Section h3 {
+		margin: 5px 0;
+	}
+	.Section p {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+	.Section a {
+		color: #4F4F4F;
+	}
+	.Section a::after {
+		content: url('/icons/arrow-right-line 1.svg');
+	}
+	@media (min-width: 600px) {
+		.Section {
+			// padding: 0;
+			// margin-bottom: 120px;
+		}
+		.Section h2 {
+			font-size: 16px;
+			margin: 10px 0;
+		}
+		.Section h3 {
+			font-size: 22px;
+		}
+		.Section p {
+			margin: 10px 0;
+		}
+		.Section a {
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		.Section .service:first-child a {
+			margin-right: 40px;
+		}
+		.Section .service {
+			display: flex;
+		}
+	}
+</style>
