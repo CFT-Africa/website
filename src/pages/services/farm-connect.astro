@@ -13,13 +13,13 @@ import connect from '../../images/logos/connect.svg'
     <form class="Section">
 			<h1>Services</h1>
       <div class="service">
-				<div class="content">
-					<img src={order} alt="" class="service">
-					<h2>Complete Farm Order</h2>
-					<p>Source raw agricultural products directly from farmers from over 50 countries in Africa</p>
-					<!-- <a href="/services/complete-farm-order">Get started now</a> -->
-				</div>
-			</div>
+        <div class="content">
+          <img src={engage} alt="" class="service">
+          <h2>Farmer Engagement</h2>
+          <p>Site under construction. Please, contact us for swift response</p>
+          <!-- <a href="/services/farm-connect">Contact</a> -->
+        </div>
+      </div>
       <div>
         <span>
           <label for="first_name">First Name</label>
@@ -32,36 +32,30 @@ import connect from '../../images/logos/connect.svg'
       </div>
       <label for="email">Email</label>
       <input name="email" type="text" required>
-      <label for="company">Company</label>
-      <input name="company" type="text" required>
-      <label for="message">Order request</label>
+      <label for="company">Company (optional)</label>
+      <input name="company" type="text">
+      <label for="message">Message</label>
       <textarea name="message" rows="8" required />
       <button type="submit">Submit</button>
-      <aside>
-        <b>What is Complete Farm Order?</b>
-        <p>
-          “Complete Farm Order” is the melting pot where farmers trade directly with buyers, offering highly competitive price for raw agricultural products, while we serve as the trade facilitator with no charge to farmers, and take care of all the necessary steps to get them delivered.
-          <br>Once you place an order request, CFT Africa will provide quotations, product options and details, logistics updates, and actual delivery. You only need to consider the terms agreed between you and CFT Africa.
-        </p>
-      </aside>
+      
     </form>
     <div>
 			<h2>See Also</h2>
-      <div class="Section">			
+      <div class="Section">
+        <div class="service">
+          <div class="content">
+            <img src={order} alt="" class="service">
+            <h2>Complete Farm Order</h2>
+            <p>Source raw agricultural products directly from farmers from over 50 countries in Africa</p>
+            <a href="/services/complete-farm-order">Get started now</a>
+          </div>
+        </div>
         <div class="service">
           <div class="content">
             <img src={go} alt="" class="service">
             <h2>EasyGo Fulfillment</h2>
             <p>We make it easy to manage your logistics and deliver raw agricultural products efficiently</p>
             <a href="/services/easygo">Get started now</a>
-          </div>
-        </div>
-        <div class="service">
-          <div class="content">
-            <img src={engage} alt="" class="service">
-            <h2>Farmer Engagement</h2>
-            <p>Site under construction. Please, contact us for swift response</p>
-            <a href="/services/farm-connect">Contact</a>
           </div>
         </div>
         <div class="service">
@@ -295,7 +289,7 @@ import connect from '../../images/logos/connect.svg'
         method: 'POST',
         body: JSON.stringify({
           'g-recaptcha-response': await grecaptcha.enterprise.execute('6LetiAUkAAAAAHzGvE5DiszPjrv9xvifWe9P7m-N', { action: 'contact' }),
-          'subject': 'Complete Farm Order',
+          'subject': 'Farm Connect',
           first_name: form.elements['first_name'].value,
           last_name: form.elements['last_name'].value,
           email: form.elements['email'].value,

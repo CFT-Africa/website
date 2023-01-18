@@ -1,6 +1,9 @@
 ---
 import Layout from '../layout/Layout.astro'
 import order from '../images/logos/order.svg'
+import go from '../images/logos/go.svg'
+import engage from '../images/logos/engage.svg'
+import connect from '../images/logos/connect.svg'
 ---
 
 <Layout>
@@ -20,29 +23,29 @@ import order from '../images/logos/order.svg'
 		</div>
 		<div class="service">
 			<div class="content">
-				<img src="icons/go.svg" alt="" class="service">
+				<img src={go} alt="" class="service">
 				<h2>EasyGo Fulfillment</h2>
 				<h3>Simplified fulfillment process for raw agricultural products with extensive network within the value chain</h3>
 				<p>We provide innovative end to end supply chain solutions for buyers/clients, with much focus on intra African trade through the AfCFTA Hub, at a click of a button</p>
-				<a href="">Register with us to experience our innovative logistic solutions</a>
+				<a href="/services/easygo">Register with us to experience our innovative logistic solutions</a>
 			</div>
 		</div>
 		<div class="service">
 			<div class="content">
-				<img src="icons/engage.svg" alt="" class="service">
+				<img src={engage} alt="" class="service">
 				<h2>Farmer Engagement</h2>
 				<h3>Engage farmers with thorough insights driven by data</h3>
 				<p>We provide hard-to-find data and intelligence on farmers to enable diligent stakeholders to make informed decisions regarding inputs, financial support & inclusion, and plenty</p>
-				<a href="">Start engaging farmers to create enabling opportunities within the agricultural value chain and improve global food security</a>
+				<a href="/services/farm-connect">Start engaging farmers to create enabling opportunities within the agricultural value chain and improve global food security</a>
 			</div>
 		</div>
 		<div class="service">
 			<div class="content">
-				<img src="icons/connect.svg" alt="" class="service">
+				<img src={connect} alt="" class="service">
 				<h2>Farmers Link</h2>
 				<h3>Connecting farmers to curated opportunities at little or no cost</h3>
 				<p>We help farmers access opportunities such as crop insurance, credit facilities from partnered financial institutions, advisory services, etc., which could otherwise be beyond their reach</p>
-				<a href="">Start browsing through opportunities and make use of what best serve your needs</a>
+				<a href="/services/farmers-link">Start browsing through opportunities and make use of what best serve your needs</a>
 			</div>
 		</div>
 	</div>
@@ -50,7 +53,7 @@ import order from '../images/logos/order.svg'
 
 <style>
 	.Hero {
-		background: 0% 0% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
+		background: 0% 0% / cover url('/darren-wanliss-aUz5UnhPnOM-unsplash.jpg') rgba(0, 0, 0, 0.5);
 		color: white;
 		padding: 60px 20px;
 		background-blend-mode: multiply;
@@ -92,7 +95,7 @@ import order from '../images/logos/order.svg'
 		color: #4F4F4F;
 	}
 	.Section a::after {
-		content: url('icons/arrow-right-line.svg');
+		content: url('/icons/arrow-right-line.svg');
 	}
 	@media (min-width: 600px) {
 		.Hero {
@@ -138,16 +141,16 @@ import order from '../images/logos/order.svg'
 		.Section .service::before {
 			content: '';
 			width: 50%;
-			background: 0% 10% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg');
+			background: 0% 10% / cover url('/darren-wanliss-aUz5UnhPnOM-unsplash.jpg');
 		}
 		.Section .service:nth-child(2)::before {
-			background: 0% 60% / cover url('sarah-elizabeth-wxhj8ZjaMbE-unsplash.jpg');
+			background: 0% 60% / cover url('/sarah-elizabeth-wxhj8ZjaMbE-unsplash.jpg');
 		}
 		.Section .service:nth-child(3)::before {
-			background: 0% 0% / cover url('darshan-gavali-OgMkQSFJ23w-unsplash.jpg');
+			background: 0% 0% / cover url('/darshan-gavali-OgMkQSFJ23w-unsplash.jpg');
 		}
 		.Section .service:nth-child(4)::before {
-			background: 0% 0% / cover url('tim-mossholder-xDwEa2kaeJA-unsplash.jpg');
+			background: 0% 0% / cover url('/tim-mossholder-xDwEa2kaeJA-unsplash.jpg');
 		}
 		.Section .service::after {
 			filter: grayscale(1);
@@ -156,11 +159,11 @@ import order from '../images/logos/order.svg'
 			position: absolute;
 			height: 480px;
 			right: 0;
-			background: 0% 0% / contain url('icons/shapes-right.svg');
+			background: 0% 0% / contain url('/icons/shapes-right.svg');
 		}
 		.Section .service:nth-child(2n)::after {
 			left: 0;
-			background: 100% 0% / contain url('icons/shapes-left.svg');
+			background: 100% 0% / contain url('/icons/shapes-left.svg');
 		}
 		.Section .content {
 			margin: 80px;

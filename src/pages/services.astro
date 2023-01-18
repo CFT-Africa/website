@@ -1,6 +1,10 @@
 ---
 import Layout from '../layout/Layout.astro'
 import image from '../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
+import order from '../images/logos/order.svg'
+import go from '../images/logos/go.svg'
+import engage from '../images/logos/engage.svg'
+import connect from '../images/logos/connect.svg'
 ---
 
 <Layout>
@@ -10,7 +14,7 @@ import image from '../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
 			<h1>Services</h1>
 			<div class="service">
 				<div class="content">
-					<img src="icons/order.svg" alt="" class="service">
+					<img src={order} alt="" class="service">
 					<h2>Complete Farm Order</h2>
 					<p>Source raw agricultural products directly from farmers from over 50 countries in Africa</p>
 					<a href="/services/complete-farm-order">Get started now</a>
@@ -18,26 +22,26 @@ import image from '../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
 			</div>
 			<div class="service">
 				<div class="content">
-					<img src="icons/go.svg" alt="" class="service">
+					<img src={go} alt="" class="service">
 					<h2>EasyGo Fulfillment</h2>
 					<p>We make it easy to manage your logistics and deliver raw agricultural products efficiently</p>
-					<a href="">Get started now</a>
+					<a href="/services/easygo">Get started now</a>
 				</div>
 			</div>
 			<div class="service">
 				<div class="content">
-					<img src="icons/engage.svg" alt="" class="service">
+					<img src={engage} alt="" class="service">
 					<h2>Farmer Engagement</h2>
 					<p>Site under construction. Please, contact us for swift response</p>
-					<a href="">Contact</a>
+					<a href="/services/farm-connect">Contact</a>
 				</div>
 			</div>
 			<div class="service">
 				<div class="content">
-					<img src="icons/connect.svg" alt="" class="service">
+					<img src={connect} alt="" class="service">
 					<h2>Farmers Link</h2>
 					<p>Site under construction. Please, tell us if you’re a farmer, farm manager or group representative to fill a survey for better engagements and services</p>
-					<a href="">Contact</a>
+					<a href="/services/farmers-link">Contact</a>
 				</div>
 			</div>
 		</div>
@@ -77,11 +81,11 @@ import image from '../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
   }
   h1 {
     margin-top: 0;
-    margin-bottom: 40px;
 		font-family: 'Barlow Condensed', sans-serif;
 		text-transform: uppercase;
 		font-size: 32px;
     @media (min-width: 600px) {
+			margin-bottom: 40px;
       font-size: 40px;
     }
   }
@@ -141,7 +145,7 @@ import image from '../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
 		color: #4F4F4F;
 	}
 	.Section a::after {
-		content: url('icons/arrow-right-line 1.svg');
+		content: url('/icons/arrow-right-line 1.svg');
 	}
 	@media (min-width: 600px) {
 		.Section {
@@ -168,47 +172,5 @@ import image from '../images/matt-benson-rHbob_bEsSs-unsplash.jpg'
 		.Section .service {
 			display: flex;
 		}
-		/* .Section .service:nth-child(2n) {
-			flex-direction: row-reverse;
-		}
-		.Section .service::before {
-			content: '';
-			width: 50%;
-			background: 0% 10% / cover url('darren-wanliss-aUz5UnhPnOM-unsplash.jpg');
-		}
-		.Section .service:nth-child(2)::before {
-			background: 0% 60% / cover url('sarah-elizabeth-wxhj8ZjaMbE-unsplash.jpg');
-		}
-		.Section .service:nth-child(3)::before {
-			background: 0% 0% / cover url('darshan-gavali-OgMkQSFJ23w-unsplash.jpg');
-		}
-		.Section .service:nth-child(4)::before {
-			background: 0% 0% / cover url('tim-mossholder-xDwEa2kaeJA-unsplash.jpg');
-		} */
-		/* .Section .service::after {
-			filter: grayscale(1);
-			content: '';
-			width: 50%;
-			position: absolute;
-			height: 480px;
-			right: 0;
-			background: 0% 0% / contain url('icons/shapes-right.svg');
-		}
-		.Section .service:nth-child(2n)::after {
-			left: 0;
-			background: 100% 0% / contain url('icons/shapes-left.svg');
-		} */
-		/* .Section .content {
-			margin: 80px;
-			padding: 40px;
-			position: relative;
-			z-index: 1;
-			max-width: 560px;
-			margin-left: -80px;
-		} */
-		/* .Section .service:nth-child(2n) .content {
-			margin-left: 0;
-			margin-right: -80px;
-		} */
 	}
 </style>
